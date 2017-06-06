@@ -1,11 +1,18 @@
 //////////////////PROBLEM 1////////////////////
+/*jshint esversion: 6 */
 
 var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
-
+let isTyler = (name) => {
+   if(name === 'Tyler') {
+      return true;
+   }else {
+      return false;
+   }
+};
 //////////////////PROBLEM 2////////////////////
 
 
@@ -13,6 +20,9 @@ var name = 'Tyler';
 
 
   //Code Here
+  let getName = () => {
+     return prompt('What is your name?')
+ }
 
 
 //////////////////PROBLEM 3////////////////////
@@ -23,6 +33,13 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+
+let welcome = (funct) => {
+   let name = funct();
+
+   alert("Welcome, " + name) ;
+};
+welcome(getName)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -53,13 +70,18 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+
+  let myName = () => {
+     return "anton bredl";
+ }
+
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+let newMyName = myName;
+console.log(newMyName());
 //Now alert the result of invoking newMyName
 
 
@@ -71,9 +93,14 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+let outerFn = () => {
+   return function() {
+      return 'anton bredl';
+   }
+};
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+let innerFn = outerFn();
+console.log(innerFn( ));   
 //Now invoke innerFn.
